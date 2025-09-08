@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar</title>
+    <link rel='stylesheet' href='styles.css'>
+</head>
+<body>
+    <header>
+        <div class="divLogo"><img class="logo" src="/logo pasteleria.png" alt="logo">
+        <h1>Bienvenidos a Pastelería Mil Sabores</h1></div>
+        
+        <nav>
+        <a href='index.html'>Inicio</a> |
+        <a href='catalogo.html'>Catálogo</a> |
+        <a href='blog.html'>Blog</a> |
+        <a href='carrito.html'>Carrito</a> |
+        <a href='usuarios.html'>Usuarios</a>
+        </nav>
+    </header>
+    <main>
+
+        <div class="feditor">
+            <h2>Editar Información Personal</h2>
+            <form id="editarForm">
+                <label for="nombre">Nombre:</label><br>
+                <input type="text" id="nombre" placeholder="Ingrese nombre" ><br><br>
+
+                <label for="email">Correo:</label><br>
+                <input type="email" id="email" placeholder="Ingrese Correo"><br><br>
+
+                <label for="telefono">Teléfono:</label><br>
+                <input type="tel" id="telefono" placeholder="Ingrese Teléfono"><br><br>
+
+                <button type="button" id="btnGuardar">Guardar Cambios</button>
+            </form>
+        </div>
+        
+        <div id="mensaje"></div>
+    </main>
+    <footer><p>© 2025 Pastelería Mil Sabores</p></footer>
+    <script src='scripts.js'></script>
+</body>
+</html>

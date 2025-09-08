@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+
+<header>
+    <div class="divLogo">
+        <img class="logo" src="/logo pasteleria.png" alt="logo">
+        <h1>Bienvenidos a Pastelería Mil Sabores</h1>
+    </div>
+    
+    <nav>
+        <a href='index.html'>Inicio</a> |
+        <a href='catalogo.html'>Catálogo</a> |
+        <a href='blog.html'>Blog</a> |
+        <a href='carrito.html'>Carrito</a> |
+        <a href='usuarios.html'>Usuarios</a>
+    </nav>
+</header>
+
+<main>
+    <div class="catalogo-contenedor">
+        <!--  FILTROS -->
+        <aside class="catalogo">
+            <h2 class="filtro">Filtros</h2>
+            <label for="tipo">Tipo:</label>
+            <select id="tipo">
+                <option value="todos">Todos</option>
+                <option value="cuadrada">Cuadrada</option>
+                <option value="circular">Circular</option>
+                <option value="postre">Postre</option>
+                <option value="sin_azucar">Sin Azúcar</option>
+                <option value="tradicional">Tradicional</option>
+                <option value="sin_gluten">Sin Gluten</option>
+                <option value="vegana">Vegana</option>
+                <option value="especial">Especial</option>
+            </select>
+
+            <label for="Sabores">Sabores:</label>
+            <select id="Sabores">
+                <option value="todos">Todos</option>
+                <option value="Chocolate">Chocolate</option>
+                <option value="Frutas">Frutas</option>
+                <option value="Vainilla">Vainilla</option>
+                <option value="Manjar">Manjar</option>
+                <option value="Naranja">Naranja</option>
+                <option value="Manzana">Manzana</option>
+                <option value="Avena">Avena</option>
+                <option value="Otros">Otros</option>
+            </select>
+
+            <label for="categoria">Categoría:</label>
+            <select id="categoria">
+                <option value="todos">Todos</option>
+                <option value="torta">Torta</option>
+                <option value="brownie">Brownie</option>
+                <option value="cheesecake">Cheesecake</option>
+                <option value="Mousse">Mousse</option>
+                <option value="empanada">Empanada</option>
+                <option value="tarta">Tarta</option>
+                <option value="galletas">Galletas</option>
+                <option value="pan">Pan</option>
+                <option value="Otro">Otros</option>
+            </select>
+        </aside>
+
+     <!-- PRODUCTOS -->
+        <section id="productos" class="catalogo-productos">
+            <div class="catalogo-card" 
+                data-categoria="torta" 
+                data-tipo="cuadrada" 
+                data-sabores="Chocolate"
+                data-codigo="TC001">
+                <p>Código: <strong>TC001</strong></p>
+                <img src="torta_chocolate.jpg" alt="Torta Cuadrada de Chocolate">
+                <h3>Torta Cuadrada de Chocolate</h3>
+                <p>Deliciosa torta de chocolate con capas de ganache y un toque de avellanas. Personalizable con mensajes especiales.</p>
+                <p><strong>$45.000 CLP</strong></p>
+                <button onclick="AgregarCarro()">Agregar al carrito</button>
+            </div>
+
+            <div class="catalogo-card" 
+                data-categoria="torta" 
+                data-tipo="cuadrada" 
+                data-sabores="Frutas"
+                data-codigo="TC002">
+                <p>Código: <strong>TC002</strong></p>
+                <img src="torta_frutas.jpg" alt="Torta Cuadrada de Frutas">
+                <h3>Torta Cuadrada de Frutas</h3>
+                <p>Una mezcla de frutas frescas y crema chantilly sobre un suave bizcocho de vainilla, ideal para celebraciones.</p>
+                <p><strong>$50.000 CLP</strong></p>
+                <button onclick="AgregarCarro()">Agregar al carrito</button>
+            </div>
+
+           <div class="catalogo-card" class="catalogo-card" 
+                data-categoria="torta" 
+                data-tipo="circular" 
+                data-sabores="Vainilla"
+                data-codigo="TC003">
+                <a href="DetalleTC003.html">
+                    <p>Código: <strong>TC003</strong></p>
+                    <img src="torta_vainilla.jpg" alt="Torta Circular de Vainilla">
+                    <h3>Torta Circular de Vainilla</h3>
+                    <p>Bizcocho de vainilla clásico relleno con crema pastelera y cubierto con un glaseado dulce, perfecto para cualquier ocasión.</p>
+                    <p><strong>$40.000 CLP</strong></p>
+                </a>
+                <button onclick="AgregarCarro()">Agregar al carrito</button>
+            </div>
+
+            <!-- Torta Circular de Manjar -->
+            <div class="catalogo-card" 
+                data-categoria="torta"
+                data-tipo="circular" 
+                data-Sabores="Manjar" 
+                data-codigo="TT002">
+                <p>Código: <strong>TT002</strong></p>
+                <img src="torta_manjar.jpg" alt="Torta Circular de Manjar">
+                <h3>Torta Circular de Manjar</h3>
+                <p>Torta tradicional chilena con manjar y nueces, un deleite para los amantes de los sabores dulces y clásicos.</p>
+                <p><strong>$42.000 CLP</strong></p>
+                <button onclick="AgregarCarro()">Agregar al carrito</button>
+            </div>
+
+            <!-- Mousse de Chocolate -->
+            <div class="catalogo-card" 
+                data-categoria="Mousse"
+                data-tipo="postre" 
+                data-Sabores="Chocolate" 
+                data-codigo="PI001">
+                <p>Código: <strong>PI001</strong></p>
+                <img src="mousse_chocolate.jpg" alt="Mousse de Chocolate">
+                <h3>Mousse de Chocolate</h3>
+                <p>Postre individual cremoso y suave, hecho con chocolate de alta calidad, ideal para los amantes del chocolate.</p>
+                <p><strong>$5.000 CLP</strong></p>
+                <button onclick="AgregarCarro()">Agregar al carrito</button>
+            </div>
+
+            <!-- Tiramisú Clásico -->
+            <div class="catalogo-card"
+                data-categoria="Otro" 
+                data-tipo="postre" 
+                data-Sabores="Otros" 
+                data-codigo="PI002">
+                <p>Código: <strong>PI002</strong></p>
+                <img src="tiramisu.jpg" alt="Tiramisú Clásico">
+                <h3>Tiramisú Clásico</h3>
+                <p>Postre italiano individual con capas de café, mascarpone y cacao, perfecto para finalizar cualquier comida.</p>
+                <p><strong>$5.500 CLP</strong></p>
+                <button onclick="AgregarCarro()">Agregar al carrito</button>
+            </div>
+
+            <!-- Torta Sin Azúcar de Naranja -->
+            <div class="catalogo-card" 
+                data-categoria="Torta"
+                data-tipo="sin_azucar" 
+                data-Sabores="Naranja" 
+                data-codigo="PSA001">
+                <p>Código: <strong>PSA001</strong></p>
+                <img src="torta_sin_azucar_naranja.jpg" alt="Torta Sin Azúcar de Naranja">
+                <h3>Torta Sin Azúcar de Naranja</h3>
+                <p>Torta ligera y deliciosa, endulzada naturalmente, ideal para quienes buscan opciones más saludables.</p>
+                <p><strong>$48.000 CLP</strong></p>
+                <button onclick="AgregarCarro()">Agregar al carrito</button>
+            </div>
+
+            <!-- Cheesecake Sin Azúcar -->
+            <div class="catalogo-card" 
+                data-categoria="Cheesecake"
+                data-tipo="sin_azucar" 
+                data-Sabores="Vainilla" 
+                data-codigo="PSA002">
+                <p>Código: <strong>PSA002</strong></p>
+                <img src="cheesecake_sin_azucar.jpg" alt="Cheesecake Sin Azúcar">
+                <h3>Cheesecake Sin Azúcar</h3>
+                <p>Suave y cremoso, este cheesecake es una opción perfecta para disfrutar sin culpa.</p>
+                <p><strong>$47.000 CLP</strong></p>
+                <button onclick="AgregarCarro()">Agregar al carrito</button>
+            </div>
+
+            <!-- Empanada de Manzana -->
+            <div class="catalogo-card" 
+                data-categoria="empanada"
+                data-tipo="tradicional" 
+                data-Sabores="Manzana" 
+                data-codigo="PT001">
+                <p>Código: <strong>PT001</strong></p>
+                <img src="empanada_manzana.jpg" alt="Empanada de Manzana">
+                <h3>Empanada de Manzana</h3>
+                <p>Pastelería tradicional rellena de manzanas especiadas, perfecta para un dulce desayuno o merienda.</p>
+                <p><strong>$3.000 CLP</strong></p>
+                <button onclick="AgregarCarro()">Agregar al carrito</button>
+            </div>
+
+            <!-- Tarta de Santiago -->
+            <div class="catalogo-card" 
+                data-categoria="tarta"
+                data-tipo="tradicional" 
+                data-Sabores="Otros" 
+                data-codigo="PT002">
+                <p>Código: <strong>PT002</strong></p>
+                <img src="tarta_santiago.jpg" alt="Tarta de Santiago">
+                <h3>Tarta de Santiago</h3>
+                <p>Tradicional tarta española hecha con almendras, azúcar y huevos, una delicia para los amantes de los postres clásicos.</p>
+                <p><strong>$6.000 CLP</strong></p>
+                <button onclick="AgregarCarro()">Agregar al carrito</button>
+            </div>
+
+            <!-- Brownie Sin Gluten -->
+            <div class="catalogo-card"
+                data-categoria="Brownie" 
+                data-tipo="sin_gluten" 
+                data-Sabores="Chocolate" 
+                data-codigo="PG001">
+                <p>Código: <strong>PG001</strong></p>
+                <img src="brownie_sin_gluten.jpg" alt="Brownie Sin Gluten">
+                <h3>Brownie Sin Gluten</h3>
+                <p>Rico y denso, perfecto para quienes necesitan evitar el gluten sin sacrificar el sabor.</p>
+                <p><strong>$4.000 CLP</strong></p>
+                <button onclick="AgregarCarro()">Agregar al carrito</button>
+            </div>
+            <!-- Pan Sin Gluten -->
+            <div class="catalogo-card"
+                data-categoria="pan" 
+                data-tipo="sin_gluten" 
+                data-Sabores="Otros" 
+                data-codigo="PG002">
+                <p>Código: <strong>PG002</strong></p>
+                <img src="pan_sin_gluten.jpg" alt="Pan Sin Gluten">
+                <h3>Pan Sin Gluten</h3>
+                <p>Suave y esponjoso, ideal para sándwiches o para acompañar cualquier comida.</p>
+                <p><strong>$3.500 CLP</strong></p>
+                <button onclick="AgregarCarro()">Agregar al carrito</button>
+            </div>
+
+            <!-- Torta Vegana de Chocolate -->
+            <div class="catalogo-card" 
+            data-categoria="torta"
+            data-tipo="vegana" 
+            data-Sabores="Chocolate" 
+            data-codigo="PV001">
+                <p>Código: <strong>PV001</strong></p>
+                <img src="torta_vegana_chocolate.jpg" alt="Torta Vegana de Chocolate">
+                <h3>Torta Vegana de Chocolate</h3>
+                <p>Torta de chocolate húmeda y deliciosa, hecha sin productos de origen animal, perfecta para veganos.</p>
+                <p><strong>$50.000 CLP</strong></p>
+                <button onclick="AgregarCarro()">Agregar al carrito</button>
+            </div>
+
+            <!-- Galletas Veganas de Avena -->
+            <div class="catalogo-card" 
+            data-categoria="galletas"
+            data-tipo="vegana" 
+            data-Sabores="Avena" 
+            data-codigo="PV002">
+                <p>Código: <strong>PV002</strong></p>
+                <img src="galletas_veganas_avena.jpg" alt="Galletas Veganas de Avena">
+                <h3>Galletas Veganas de Avena</h3>
+                <p>Crujientes y sabrosas, estas galletas son una excelente opción para un snack saludable y vegano.</p>
+                <p><strong>$4.500 CLP</strong></p>
+                <button onclick="AgregarCarro()">Agregar al carrito</button>
+            </div>
+
+            <!-- Torta Especial de Cumpleaños -->
+            <div class="catalogo-card" 
+            data-categoria="torta"
+            data-tipo="especial" 
+            data-Sabores="Chocolate,Frutas,Vainilla,Manjar,Naranja,Manzana,Avena" data-codigo="TE001">
+                <p>Código: <strong>TE001</strong></p>
+                <img src="torta_especial_cumpleanos.jpg" alt="Torta Especial de Cumpleaños">
+                <h3>Torta Especial de Cumpleaños</h3>
+                <p>Diseñada especialmente para celebraciones, personalizable con decoraciones y mensajes únicos.</p>
+                <p><strong>$55.000 CLP</strong></p>
+                <button onclick="AgregarCarro()">Agregar al carrito</button>
+            </div>
+
+            <!-- Torta Especial de Boda -->
+            <div class="catalogo-card" 
+            data-categoria="torta"
+            data-tipo="especial" 
+            data-Sabores="Chocolate,Frutas,Vainilla,Manjar,Naranja,Manzana,Avena" data-codigo="TE002">
+                <p>Código: <strong>TE002</strong></p>
+                <img src="torta_especial_boda.jpg" alt="Torta Especial de Boda">
+                <h3>Torta Especial de Boda</h3>
+                <p>Elegante y deliciosa, diseñada para ser el centro de atención en cualquier boda.</p>
+                <p><strong>$60.000 CLP</strong></p>
+                <button onclick="AgregarCarro()">Agregar al carrito</button>
+            </div>
+
+    </section>
+</main>
+
+<footer>
+    <p> 2025 Pastelería Mil Sabores</p>
+</footer>
+
+<script src='scripts.js'></script>
+</body>
+</html>

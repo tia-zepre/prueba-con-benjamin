@@ -1,0 +1,247 @@
+
+/*Generales*/
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: #FFF5E1; /*requerimiento*/
+    color: #5D4037; /*requerimiento*/
+    margin:0; 
+    padding:0;
+    
+}
+header, footer {
+    background-color:#FFC0CB; /*requerimiento*/
+
+}
+.login{
+    margin: 5%;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px #5D4037;
+}
+input{
+    font-size: 16px ;
+    width:50%; 
+    text-align:center;
+}
+
+nav {
+    background-color:#8B4513; 
+    padding:10px; 
+    text-align:center;
+}
+nav a {
+    color:#FFC0CB; 
+    margin:0 10px; 
+    text-decoration:none;
+}
+button {
+    background-color:#FFC0CB; /*requerimiento*/
+    color:#8B4513 ; /*requerimiento*/
+    border:none;
+    border-radius: 10%;
+    margin-top:10px; 
+    padding:10px; 
+    cursor:pointer;
+    font-size: 16px;
+}
+    
+table {
+    width:100%; 
+    border-collapse:collapse; 
+    margin-top:10px;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Pacifico';
+    color:#5D4037; /*requerimiento*/
+    text-align:center;
+}
+p{
+    font-family: 'Lato';
+    font-size: 16px;
+    padding-left:5px; 
+    padding-right:5px; 
+    text-align:center; 
+}
+textarea {
+    width:100%; 
+    height:80px;
+}
+
+.divLogo{
+    padding: 10px;
+}
+
+.logo {
+    width: 50px;
+    vertical-align: middle; /* Alinea con el texto */
+    display: inline-block;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+header h1 {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 24px;
+}
+
+a{
+   color: #5D4037; 
+   text-decoration:none;
+    
+}
+/* index */
+.imgPrincipal{
+    width: 80%;
+    box-shadow: 0 0 20px #5D4037;
+    padding: 10px;
+}
+
+
+/*formulario editor usuario*/
+.feditor{
+    margin: 5%;
+    text-align:center;
+}
+
+/*catalogo */
+
+.catalogo-contenedor {
+    width: 100%;
+    padding: 10px;
+}
+
+/* Sidebar lateral */
+.catalogo {
+    width: 200px;
+    float: left;
+    background-color: #8B4513;
+    color: #FFC0CB;
+    padding: 15px;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+.filtro{
+    color: #FFC0CB;
+
+}
+
+.catalogo label, 
+.catalogo select {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.catalogo select {
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    font-size: 14px;
+}
+
+/* Productos al lado del sidebar */
+.catalogo-productos {
+    margin-left: 220px; /* para que alla targeta a un lado*/
+    text-align: center;
+}
+
+/* Cards de producto */
+.catalogo-card {
+    display: inline-block;
+    width: 250px;
+    margin: 5px;
+    background-color: #FFC0CB;
+    border-radius: 15px;
+    padding: 5px;
+    vertical-align: top;
+    box-shadow: 0 0 10px #5D4037;
+    text-align: center;
+}
+
+/*Detalle*/
+.detalle-producto {
+    width: 90%;
+    margin: 10px ;
+    background-color: #FFF0F5; /* un ligero contraste con el body */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px #5D4037;
+}
+
+
+.imagen-detalle img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px #5D4037;
+}
+
+.info-detalle {
+    text-align: left;
+    justify-content: flex-start;
+}
+
+.info-detalle h2 {
+    font-size: 28px;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.info-detalle p {
+    font-size: 16px;
+    text-align: left;
+}
+
+.info-detalle input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 1px solid #5D4037;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#agregarCarrito {
+    width: 50%;
+    align-self: center;
+}
+
+/* Reseñas */
+.detalle-producto{
+    margin: 10px;
+}
+
+.reseñas textarea  {
+    width: 95%;
+    height: 100px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #5D4037;
+    resize: none;
+    font-size: 14px;
+}
+
+.reseñas button, #agregarCarrito {
+    width: 100%;
+    border-radius: 10px;
+}
+
+
+
+#resenas {
+    margin-top: 15px;
+    padding: 10px;
+    border: 1px solid #5D4037;
+    border-radius: 10px;
+    background-color: #FFF5E1;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+#resenas p {
+    margin: 5px 0;
+    padding: 5px;
+    border-bottom: 1px dotted #5D4037;
+    font-size: 14px;
+}
