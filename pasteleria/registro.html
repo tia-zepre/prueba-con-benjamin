@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel='stylesheet' href='styles.css'>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Pacifico&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+    <header>
+
+    </header>
+
+    <main>
+        <div class="card">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="Nombre">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Correo electrónico</label>
+            <input type="email" class="form-control" id="Correo">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Contraseña</label>
+            <input type="password" class="form-control" id="Contrasena">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Repita Contraseña</label>
+            <input type="password" class="form-control" id="Repetir contrasena">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Codigo</label>
+            <input type="email" class="form-control" id="Codigo">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Fecha Nacimiento</label>
+            <input type="date" class="form-control" id="fechaNacimiento">
+        </div>
+
+        <button type="button" class="btn btn-light">Crear Cuenta</button>
+        <button type="button" class="btn btn-light">Limpiar</button>
+
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+            crossorigin="anonymous"></script>
+
+
+        <script>
+            document.getElementById("fechaNacimiento").addEventListener("change", function () {
+                const fechaNac = new Date(this.value);
+                const hoy = new Date();
+                let edad = hoy.getFullYear() - fechaNac.getFullYear();
+                const mes = hoy.getMonth() - fechaNac.getMonth();
+
+                // Ajustar si el cumpleaños aún no ha pasado este año
+                if (mes < 0 || (mes === 0 && hoy.getDate() < fechaNac.getDate())) {
+                    edad--;
+                }
+
+                const mensaje = document.getElementById("descuentoMsg");
+                if (edad >= 50) {
+                    mensaje.classList.remove("d-none");
+                    mensaje.textContent = "Felicidades, tienes 50% de descuento en todas tus compras.";
+                } else {
+                    mensaje.classList.add("d-none");
+                }
+            });
+        </script>
+
+        <script>
+            function codigo() {
+                if (Codigo == "FELICES50")
+                    mensaje.textContent = "Felicidades, tienes 10% de descuento en todas tus compras.";
+
+            }   else {
+                mensaje.classList.add("d-none");
+            }
+        </script>
+
+        <script>
+            function validateName() {
+                const ok = nameRegex.test(fullName.value.trim());
+                fullName.classList.toggle('is-invalid', !ok);
+                return ok;
+            }
+
+        </script>
+
+        <script>
+            function validatePassword() {
+            const v = password.value;
+            const ok = passwordRegex.length.test(v) && passwordRegex.upper.test(v) && passwordRegex.lower.test(v) && passwordRegex.number.test(v) && passwordRegex.special.test(v);
+            password.classList.toggle('is-invalid', !ok);
+            return ok;
+            }
+        </script>
+
+        <script>
+            function correoDescuento(){
+            if (Correo ==)
+            }
+        </script>
+
+    </main>
+
+    <footer>
+
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
